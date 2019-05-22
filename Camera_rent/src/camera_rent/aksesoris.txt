@@ -1,0 +1,2 @@
+No,Nama Barang, Harga,Stok
+1/3pod /15000/20

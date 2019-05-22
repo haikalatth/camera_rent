@@ -1,0 +1,2 @@
+No,Nama Barang, Harga,Stok
+1/Sony a7s mkII /170000/2
