@@ -16,31 +16,31 @@ import javax.swing.table.DefaultTableModel;
  * @author Asus
  */
 public class MasukKeranjang {
+
     DefaultTableModel model;
+
     public void tambahitem(JTable tb_kamera, JTable tb_keranjang, int a) {
-        model = (DefaultTableModel)tb_kamera.getModel();
-        String kb = model.getValueAt(a,0).toString();
+        model = (DefaultTableModel) tb_kamera.getModel();
+        String kb = model.getValueAt(a, 0).toString();
         String nb = model.getValueAt(a, 1).toString();
         String hb = model.getValueAt(a, 2).toString();
         //kurangi stok
-        String strstok = model.getValueAt(a,3).toString();
-        int stok = Integer.parseInt(strstok)-1;
-        if(stok<0){
-            JOptionPane.showMessageDialog(null,"Stok Habis");
-        }else{
-            model.setValueAt(Integer.toString(stok),a,3);
+        String strstok = model.getValueAt(a, 3).toString();
+        int stok = Integer.parseInt(strstok) - 1;
+        if (stok < 0) {
+            JOptionPane.showMessageDialog(null, "Stok Habis");
+        } else {
+            model.setValueAt(Integer.toString(stok), a, 3);
             List data = new ArrayList<>();
             data.add(kb);
             data.add(nb);
             data.add(hb);
-            
-            
+
             //masuk keranjang
-            DefaultTableModel mdl = (DefaultTableModel)tb_keranjang.getModel();
+            DefaultTableModel mdl = (DefaultTableModel) tb_keranjang.getModel();
             mdl.addRow(data.toArray());
         }
-        
-        
+
         //kurangi stok        
         /*try{
             file = new File("src/camera_rent/kamera.txt");
@@ -85,8 +85,29 @@ public class MasukKeranjang {
         LoadData ld = new LoadData();
         ld.loadKamera(tb_kamera);
         //ld.loadAksesoris(tb_aksesoris);*/
-        
-        
-        
+    }
+
+    public void tambahaksesoris(JTable tb_aksesoris, JTable tb_keranjang, int a) {
+        model = (DefaultTableModel) tb_aksesoris.getModel();
+        String kb = model.getValueAt(a, 0).toString();
+        String nb = model.getValueAt(a, 1).toString();
+        String hb = model.getValueAt(a, 2).toString();
+
+        //kurangi stok
+        String strstok = model.getValueAt(a, 3).toString();
+        int stok = Integer.parseInt(strstok) - 1;
+        if (stok < 0) {
+            JOptionPane.showMessageDialog(null, "Stok Habis");
+        } else {
+            model.setValueAt(Integer.toString(stok), a, 3);
+            List dat = new ArrayList<>();
+            dat.add(kb);
+            dat.add(nb);
+            dat.add(hb);
+            
+            //masuk keranjang
+            DefaultTableModel mdl2 = (DefaultTableModel) tb_keranjang.getModel();
+            mdl2.addRow(dat.toArray());
+        }
     }
 }

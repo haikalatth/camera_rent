@@ -47,11 +47,6 @@ int row;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(657, 504));
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
-        });
         getContentPane().setLayout(null);
 
         tb_kamera.setModel(new javax.swing.table.DefaultTableModel(
@@ -90,6 +85,11 @@ int row;
 
             }
         ));
+        tb_aksesoris.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tb_aksesorisMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tb_aksesoris);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -141,17 +141,17 @@ int row;
         bt_cancel.setBounds(530, 460, 120, 30);
 
         jButton4.setText("Selanjutnya");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton4);
         jButton4.setBounds(530, 400, 120, 40);
 
         setSize(new java.awt.Dimension(680, 544));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        // TODO add your handling code here:
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
-    }//GEN-LAST:event_formWindowOpened
 
     private void tb_kameraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_kameraMouseClicked
         row = tb_kamera.getSelectedRow();
@@ -165,6 +165,20 @@ int row;
         ca.batal(tb_keranjang,tb_kamera,tb_aksesoris,b);
         //ca.stok(tb_kamera,row);
     }//GEN-LAST:event_bt_cancelMouseClicked
+
+    private void tb_aksesorisMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_aksesorisMouseClicked
+        // TODO add your handling code here:
+        row = tb_aksesoris.getSelectedRow();
+        MasukKeranjang mk = new MasukKeranjang();
+        mk.tambahaksesoris(tb_aksesoris,tb_keranjang,row);
+    }//GEN-LAST:event_tb_aksesorisMouseClicked
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+       
+        
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
