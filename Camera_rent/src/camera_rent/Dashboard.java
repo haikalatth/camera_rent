@@ -40,14 +40,13 @@ public class Dashboard extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tb_aksesoris = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tb_keranjang = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        bt_cancel = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(657, 504));
-        setPreferredSize(new java.awt.Dimension(657, 504));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -63,6 +62,11 @@ public class Dashboard extends javax.swing.JFrame {
 
             }
         ));
+        tb_kamera.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tb_kameraMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(tb_kamera);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -104,15 +108,15 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().add(jTabbedPane1);
         jTabbedPane1.setBounds(0, 0, 660, 290);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tb_keranjang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-
+                "Nama Barang", "Harga"
             }
         ));
-        jScrollPane3.setViewportView(jTable1);
+        jScrollPane3.setViewportView(tb_keranjang);
 
         getContentPane().add(jScrollPane3);
         jScrollPane3.setBounds(0, 320, 340, 180);
@@ -122,9 +126,14 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 290, 110, 30);
 
-        jButton2.setText("Cancel");
-        getContentPane().add(jButton2);
-        jButton2.setBounds(360, 460, 120, 30);
+        bt_cancel.setText("Cancel");
+        bt_cancel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_cancelMouseClicked(evt);
+            }
+        });
+        getContentPane().add(bt_cancel);
+        bt_cancel.setBounds(360, 460, 120, 30);
 
         jButton4.setText("Selanjutnya");
         getContentPane().add(jButton4);
@@ -138,6 +147,18 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         //setExtendedState(JFrame.MAXIMIZED_BOTH);
     }//GEN-LAST:event_formWindowOpened
+
+    private void tb_kameraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_kameraMouseClicked
+        int a = tb_kamera.getSelectedRow();
+        MasukKeranjang mk = new MasukKeranjang();
+        mk.pilih(tb_kamera,tb_keranjang,a);
+    }//GEN-LAST:event_tb_kameraMouseClicked
+
+    private void bt_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cancelMouseClicked
+        int b = tb_keranjang.getSelectedRow();
+        Cancel ca = new Cancel();
+        ca.batal(tb_keranjang,b);
+    }//GEN-LAST:event_bt_cancelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -176,7 +197,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton bt_cancel;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -185,8 +206,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable tb_aksesoris;
     private javax.swing.JTable tb_kamera;
+    private javax.swing.JTable tb_keranjang;
     // End of variables declaration//GEN-END:variables
 }
