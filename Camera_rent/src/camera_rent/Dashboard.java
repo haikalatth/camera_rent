@@ -12,7 +12,7 @@ import javax.swing.JFrame;
  * @author micin
  */
 public class Dashboard extends javax.swing.JFrame {
-
+int row;
     /**
      * Creates new form Dashboard
      */
@@ -113,13 +113,18 @@ public class Dashboard extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nama Barang", "Harga"
+                "Kode", "Nama Barang", "Harga"
             }
         ));
         jScrollPane3.setViewportView(tb_keranjang);
+        if (tb_keranjang.getColumnModel().getColumnCount() > 0) {
+            tb_keranjang.getColumnModel().getColumn(0).setMinWidth(2);
+            tb_keranjang.getColumnModel().getColumn(0).setPreferredWidth(2);
+            tb_keranjang.getColumnModel().getColumn(0).setMaxWidth(2);
+        }
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(0, 320, 340, 180);
+        jScrollPane3.setBounds(0, 320, 500, 180);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Keranjang :");
@@ -133,11 +138,11 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bt_cancel);
-        bt_cancel.setBounds(360, 460, 120, 30);
+        bt_cancel.setBounds(530, 460, 120, 30);
 
         jButton4.setText("Selanjutnya");
         getContentPane().add(jButton4);
-        jButton4.setBounds(360, 400, 120, 40);
+        jButton4.setBounds(530, 400, 120, 40);
 
         setSize(new java.awt.Dimension(680, 544));
         setLocationRelativeTo(null);
@@ -149,15 +154,16 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void tb_kameraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_kameraMouseClicked
-        int a = tb_kamera.getSelectedRow();
+        row = tb_kamera.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
-        mk.pilih(tb_kamera,tb_keranjang,a);
+        mk.tambahitem(tb_kamera,tb_keranjang,row);
     }//GEN-LAST:event_tb_kameraMouseClicked
 
     private void bt_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cancelMouseClicked
         int b = tb_keranjang.getSelectedRow();
         Cancel ca = new Cancel();
-        ca.batal(tb_keranjang,b);
+        ca.batal(tb_keranjang,tb_kamera,tb_aksesoris,b);
+        //ca.stok(tb_kamera,row);
     }//GEN-LAST:event_bt_cancelMouseClicked
 
     /**
