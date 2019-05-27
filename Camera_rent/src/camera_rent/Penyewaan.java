@@ -36,42 +36,43 @@ public class Penyewaan extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(341, 317));
-        setPreferredSize(new java.awt.Dimension(341, 317));
+        setMinimumSize(new java.awt.Dimension(860, 540));
+        setPreferredSize(new java.awt.Dimension(860, 540));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel1.setText("Data Pesanan :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 10, 130, 19);
+        jLabel1.setBounds(70, 200, 130, 24);
 
         jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel2.setText("Lama Peminjaman :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(10, 230, 120, 20);
+        jLabel2.setBounds(80, 400, 140, 20);
 
         jLabel3.setText("Hari Peminjaman");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 260, 100, 14);
+        jLabel3.setBounds(120, 430, 100, 14);
 
         jLabel4.setText("Hari Pengembalian");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(10, 290, 90, 14);
+        jLabel4.setBounds(120, 460, 110, 14);
 
         jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
         jLabel5.setText("Total");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(240, 230, 40, 20);
+        jLabel5.setBounds(730, 400, 40, 20);
 
         jLabel6.setText("0");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(240, 250, 20, 14);
+        jLabel6.setBounds(740, 430, 20, 14);
 
         jButton1.setText("Selanjutnya");
         getContentPane().add(jButton1);
-        jButton1.setBounds(240, 280, 90, 23);
+        jButton1.setBounds(690, 460, 110, 30);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -84,7 +85,11 @@ public class Penyewaan extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable2);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 30, 340, 190);
+        jScrollPane1.setBounds(200, 200, 600, 190);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pesanitem1.png"))); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(0, -10, 860, 550);
 
         pack();
         setLocationRelativeTo(null);
@@ -133,6 +138,7 @@ public class Penyewaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables

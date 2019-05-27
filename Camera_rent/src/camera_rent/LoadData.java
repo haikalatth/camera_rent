@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -40,7 +41,7 @@ public class LoadData {
             }
             
         }catch(Exception e){
-            
+            JOptionPane.showMessageDialog(null, "a");
         }
     }
     public void loadAksesoris(JTable tb_aksesoris) {
@@ -61,7 +62,7 @@ public class LoadData {
             }
             
         }catch(Exception e){
-            
+            JOptionPane.showMessageDialog(null, "b");
         }
     }
 }
