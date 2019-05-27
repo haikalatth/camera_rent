@@ -36,11 +36,12 @@ public class Penyewaan extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 540));
-        setPreferredSize(new java.awt.Dimension(860, 540));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
@@ -59,7 +60,7 @@ public class Penyewaan extends javax.swing.JFrame {
 
         jLabel4.setText("Hari Pengembalian");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(120, 460, 110, 14);
+        jLabel4.setBounds(120, 470, 110, 14);
 
         jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
         jLabel5.setText("Total");
@@ -71,6 +72,11 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel6.setBounds(740, 430, 20, 14);
 
         jButton1.setText("Selanjutnya");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(690, 460, 110, 30);
 
@@ -86,6 +92,10 @@ public class Penyewaan extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(200, 200, 600, 190);
+        getContentPane().add(jDateChooser1);
+        jDateChooser1.setBounds(280, 420, 160, 30);
+        getContentPane().add(jDateChooser2);
+        jDateChooser2.setBounds(280, 460, 160, 30);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pesanitem1.png"))); // NOI18N
         getContentPane().add(jLabel7);
@@ -94,6 +104,13 @@ public class Penyewaan extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Datadiri d = new Datadiri();
+        d.setVisible(true);
+        d.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +149,8 @@ public class Penyewaan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

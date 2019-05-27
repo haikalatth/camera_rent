@@ -44,7 +44,6 @@ public class Datadiri extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(840, 540));
-        setPreferredSize(new java.awt.Dimension(840, 540));
         getContentPane().setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
@@ -101,6 +100,11 @@ public class Datadiri extends javax.swing.JFrame {
         jRadioButton2.setBounds(570, 380, 110, 23);
 
         jButton1.setText("Selanjutnya");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(620, 450, 110, 30);
 
@@ -142,6 +146,13 @@ public class Datadiri extends javax.swing.JFrame {
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Pembayaran p = new Pembayaran();
+        p.setVisible(true);
+        p.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

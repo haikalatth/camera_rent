@@ -180,10 +180,10 @@ int row;
     }//GEN-LAST:event_tb_aksesorisMouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-       
-        
-        
+        Penyewaan p = new Penyewaan();
+        p.setVisible(true);
+        p.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
