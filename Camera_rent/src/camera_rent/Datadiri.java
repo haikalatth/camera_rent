@@ -41,7 +41,6 @@ public class Datadiri extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(840, 540));
@@ -134,10 +133,6 @@ public class Datadiri extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(640, 450, 90, 30);
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/isidatadiri1.png"))); // NOI18N
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(0, 0, 870, 540);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -215,7 +210,6 @@ public class Datadiri extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;

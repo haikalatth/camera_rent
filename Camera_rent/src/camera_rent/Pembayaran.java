@@ -38,7 +38,6 @@ public class Pembayaran extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 540));
@@ -84,10 +83,6 @@ public class Pembayaran extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(400, 450, 100, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/konfirmasipesanan1.png"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 860, 540);
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -131,7 +126,6 @@ public class Pembayaran extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

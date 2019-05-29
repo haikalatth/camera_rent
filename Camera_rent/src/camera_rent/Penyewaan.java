@@ -39,7 +39,6 @@ public class Penyewaan extends javax.swing.JFrame {
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 540));
@@ -48,7 +47,7 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel1.setText("Data Pesanan :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 200, 130, 19);
+        jLabel1.setBounds(70, 200, 130, 24);
 
         jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel2.setText("Lama Peminjaman :");
@@ -106,10 +105,6 @@ public class Penyewaan extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(740, 460, 100, 30);
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pesanitem1.png"))); // NOI18N
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(0, 0, 860, 540);
 
         pack();
         setLocationRelativeTo(null);
@@ -176,7 +171,6 @@ public class Penyewaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
