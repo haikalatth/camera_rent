@@ -6,7 +6,6 @@
 package camera_rent;
 
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -115,7 +114,7 @@ int row;
 
             },
             new String [] {
-                "Kode", "Nama Barang", "Harga", "Banyak", "Total"
+                "Kode", "Nama Barang", "Harga"
             }
         ));
         jScrollPane3.setViewportView(tb_keranjang);
@@ -158,7 +157,7 @@ int row;
     private void tb_kameraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_kameraMouseClicked
         row = tb_kamera.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
-        mk.tambahKamera(tb_kamera,tb_keranjang,row);
+        mk.tambahitem(tb_kamera,tb_keranjang,row);
     }//GEN-LAST:event_tb_kameraMouseClicked
 
     private void bt_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cancelMouseClicked
@@ -172,7 +171,7 @@ int row;
         // TODO add your handling code here:
         row = tb_aksesoris.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
-        mk.tambahAksesoris(tb_aksesoris,tb_keranjang,row);
+        mk.tambahaksesoris(tb_aksesoris,tb_keranjang,row);
     }//GEN-LAST:event_tb_aksesorisMouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
