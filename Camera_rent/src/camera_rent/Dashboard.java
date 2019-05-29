@@ -114,7 +114,7 @@ int row;
 
             },
             new String [] {
-                "Kode", "Nama Barang", "Harga", "Banyak", "Title 5"
+                "Kode", "Nama Barang", "Harga", "Banyak", "Total"
             }
         ));
         jScrollPane3.setViewportView(tb_keranjang);
@@ -142,6 +142,11 @@ int row;
         bt_cancel.setBounds(720, 480, 120, 30);
 
         jButton4.setText("Selanjutnya");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -175,11 +180,17 @@ int row;
     }//GEN-LAST:event_tb_aksesorisMouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Keranjang kr = new Keranjang();
+        kr.Keranjang(tb_keranjang);
         Penyewaan p = new Penyewaan();
         p.setVisible(true);
         p.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4MouseClicked
 
     /**
      * @param args the command line arguments

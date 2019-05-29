@@ -65,4 +65,25 @@ public class LoadData {
             JOptionPane.showMessageDialog(null, "b");
         }
     }
+    public void loadKeranjang(JTable tb_keranjang) {
+        file = new File("src/camera_rent/keranjang.txt");
+        try{
+            br = new BufferedReader(new FileReader(file));
+            String barispertama = br.readLine();
+            String[] namaKolom = barispertama.split(",");
+            model = (DefaultTableModel)tb_keranjang.getModel();
+            model.setColumnIdentifiers(namaKolom);
+            
+            Object[] dataBaris = br.lines().toArray();
+            for(int i=0;i<dataBaris.length;i++){
+                String baris = dataBaris[i].toString();
+                String[] data = baris.split("/");
+                
+                model.addRow(data);
+            }
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "b");
+        }
+    }
 }

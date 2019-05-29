@@ -16,6 +16,8 @@ public class Penyewaan extends javax.swing.JFrame {
      */
     public Penyewaan() {
         initComponents();
+        LoadData ld = new LoadData();
+        ld.loadKeranjang(tb_keranjang);
     }
 
     /**
@@ -35,7 +37,7 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tb_keranjang = new javax.swing.JTable();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
@@ -47,7 +49,7 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel1.setText("Data Pesanan :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 200, 130, 24);
+        jLabel1.setBounds(70, 200, 130, 22);
 
         jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel2.setText("Lama Peminjaman :");
@@ -80,7 +82,7 @@ public class Penyewaan extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(630, 460, 100, 30);
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tb_keranjang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -88,7 +90,7 @@ public class Penyewaan extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable2);
+        jScrollPane1.setViewportView(tb_keranjang);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(200, 200, 640, 190);
@@ -172,6 +174,6 @@ public class Penyewaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable2;
+    private javax.swing.JTable tb_keranjang;
     // End of variables declaration//GEN-END:variables
 }
