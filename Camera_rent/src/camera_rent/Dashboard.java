@@ -114,7 +114,7 @@ int row;
 
             },
             new String [] {
-                "Kode", "Nama Barang", "Harga"
+                "Kode", "Nama Barang", "Harga", "Banyak", "Title 5"
             }
         ));
         jScrollPane3.setViewportView(tb_keranjang);
@@ -157,7 +157,7 @@ int row;
     private void tb_kameraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_kameraMouseClicked
         row = tb_kamera.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
-        mk.tambahitem(tb_kamera,tb_keranjang,row);
+        mk.tambahKamera(tb_kamera,tb_keranjang,row);
     }//GEN-LAST:event_tb_kameraMouseClicked
 
     private void bt_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cancelMouseClicked
@@ -171,7 +171,7 @@ int row;
         // TODO add your handling code here:
         row = tb_aksesoris.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
-        mk.tambahaksesoris(tb_aksesoris,tb_keranjang,row);
+        mk.tambahAksesoris(tb_aksesoris,tb_keranjang,row);
     }//GEN-LAST:event_tb_aksesorisMouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
