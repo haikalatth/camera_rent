@@ -27,30 +27,66 @@ public class Pembayaran extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(860, 540));
+        getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("KONFIRMASI");
+        jLabel3.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel3.setText("Hari Pengembalian Barang");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(70, 380, 210, 20);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(119, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(281, Short.MAX_VALUE))
-        );
+        jLabel4.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel4.setText("Barang Yang Dipesan");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(70, 290, 170, 20);
+
+        jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel5.setText("No. HP");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(70, 250, 70, 20);
+
+        jLabel6.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel6.setText("Nama ");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(70, 210, 70, 20);
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(320, 290, 160, 20);
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(320, 380, 160, 20);
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(320, 210, 160, 20);
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(320, 340, 160, 20);
+
+        jLabel10.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel10.setText("Total Harga");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(70, 340, 100, 20);
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(320, 250, 160, 20);
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton1.setText("OK");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(400, 450, 100, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/konfirmasipesanan1.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 860, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -91,6 +127,17 @@ public class Pembayaran extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

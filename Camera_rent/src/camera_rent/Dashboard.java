@@ -44,7 +44,7 @@ int row;
         jLabel1 = new javax.swing.JLabel();
         bt_cancel = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(241, 238, 238));
@@ -151,9 +151,9 @@ int row;
         getContentPane().add(jButton4);
         jButton4.setBounds(720, 420, 120, 40);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/camera_rent/pilihitem1.png"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(0, 0, 860, 540);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pilihitem1.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(-6, -6, 870, 550);
 
         setSize(new java.awt.Dimension(876, 579));
         setLocationRelativeTo(null);
@@ -226,7 +226,7 @@ int row;
     private javax.swing.JButton bt_cancel;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

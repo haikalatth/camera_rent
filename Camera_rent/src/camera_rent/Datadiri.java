@@ -40,6 +40,7 @@ public class Datadiri extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,7 +107,7 @@ public class Datadiri extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(620, 450, 110, 30);
+        jButton1.setBounds(530, 450, 100, 30);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +124,15 @@ public class Datadiri extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField5);
         jTextField5.setBounds(190, 410, 540, 30);
+
+        jButton2.setText("Kembali");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(640, 450, 90, 30);
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/isidatadiri1.png"))); // NOI18N
         getContentPane().add(jLabel7);
@@ -153,6 +163,14 @@ public class Datadiri extends javax.swing.JFrame {
         p.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        Penyewaan p = new Penyewaan();
+        p.setVisible(true);
+        p.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,6 +209,7 @@ public class Datadiri extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
