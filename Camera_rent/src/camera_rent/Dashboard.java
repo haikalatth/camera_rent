@@ -44,8 +44,6 @@ int row;
         jLabel1 = new javax.swing.JLabel();
         bt_cancel = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        t_subtotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(241, 238, 238));
@@ -162,14 +160,6 @@ int row;
         getContentPane().add(jButton4);
         jButton4.setBounds(720, 420, 120, 40);
 
-        jLabel2.setText("Sub total");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(510, 520, 60, 14);
-
-        t_subtotal.setText("0");
-        getContentPane().add(t_subtotal);
-        t_subtotal.setBounds(580, 520, 110, 14);
-
         setSize(new java.awt.Dimension(876, 579));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -178,16 +168,14 @@ int row;
         row = tb_kamera.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
         mk.tambahKamera(tb_kamera,tb_keranjang,row);
-        SubTotal st = new SubTotal();
-        st.tambah(tb_keranjang, t_subtotal);
     }//GEN-LAST:event_tb_kameraMouseClicked
 
     private void bt_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cancelMouseClicked
         int b = tb_keranjang.getSelectedRow();
         Cancel ca = new Cancel();
         ca.batal(tb_keranjang,tb_kamera,tb_aksesoris,b);
-        SubTotal st = new SubTotal();
-        st.tambah(tb_keranjang, t_subtotal);
+//        SubTotal st = new SubTotal();
+//        st.tambah(tb_keranjang, t_subtotal);
         //ca.stok(tb_kamera,row);
     }//GEN-LAST:event_bt_cancelMouseClicked
 
@@ -196,8 +184,6 @@ int row;
         row = tb_aksesoris.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
         mk.tambahAksesoris(tb_aksesoris,tb_keranjang,row);
-        SubTotal st = new SubTotal();
-        st.tambah(tb_keranjang, t_subtotal);
     }//GEN-LAST:event_tb_aksesorisMouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -257,14 +243,12 @@ int row;
     private javax.swing.JButton bt_cancel;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JLabel t_subtotal;
     private javax.swing.JTable tb_aksesoris;
     private javax.swing.JTable tb_kamera;
     private javax.swing.JTable tb_keranjang;
