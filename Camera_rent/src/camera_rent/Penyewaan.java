@@ -5,12 +5,17 @@
  */
 package camera_rent;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author M . FR
  */
 public class Penyewaan extends javax.swing.JFrame {
-
+int jmlhari;
     /**
      * Creates new form Penyewaan
      */
@@ -18,6 +23,13 @@ public class Penyewaan extends javax.swing.JFrame {
         initComponents();
         LoadData ld = new LoadData();
         ld.loadKeranjang(tb_keranjang);
+        
+        //set tgl pinjam
+        tgl_pinjam.setDateFormatString("yyyy-MM-dd");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Calendar cal = Calendar.getInstance();
+        this.setTitle(sdf.format(cal.getTime()));
+        tgl_pinjam.setDate(cal.getTime());  
     }
 
     /**
@@ -38,8 +50,8 @@ public class Penyewaan extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tb_keranjang = new javax.swing.JTable();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
+        tgl_pinjam = new com.toedter.calendar.JDateChooser();
+        tgl_kembali = new com.toedter.calendar.JDateChooser();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,10 +106,12 @@ public class Penyewaan extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(200, 200, 640, 190);
-        getContentPane().add(jDateChooser1);
-        jDateChooser1.setBounds(280, 420, 160, 30);
-        getContentPane().add(jDateChooser2);
-        jDateChooser2.setBounds(280, 460, 160, 30);
+
+        tgl_pinjam.setEnabled(false);
+        getContentPane().add(tgl_pinjam);
+        tgl_pinjam.setBounds(280, 420, 160, 30);
+        getContentPane().add(tgl_kembali);
+        tgl_kembali.setBounds(280, 460, 160, 30);
 
         jButton2.setText("Kembali");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +127,15 @@ public class Penyewaan extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //hitung hari
+        Date tglkembali = tgl_kembali.getDate();
+        Date tglpinjam = tgl_pinjam.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        int pinjam = Integer.parseInt(sdf.format(tglpinjam));
+        int kembali = Integer.parseInt(sdf.format(tglkembali));
+        jmlhari = kembali-pinjam;
+        JOptionPane.showMessageDialog(null, "SEWA "+jmlhari+" hari");
+        
         Datadiri d = new Datadiri();
         d.setVisible(true);
         d.setLocationRelativeTo(null);
@@ -165,8 +188,6 @@ public class Penyewaan extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -175,5 +196,7 @@ public class Penyewaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tb_keranjang;
+    private com.toedter.calendar.JDateChooser tgl_kembali;
+    private com.toedter.calendar.JDateChooser tgl_pinjam;
     // End of variables declaration//GEN-END:variables
 }

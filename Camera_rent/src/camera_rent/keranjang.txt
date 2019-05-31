@@ -1,3 +1,2 @@
 Kode,Nama Barang,Harga,Banyak,Total
 001/Sony a7s mkII /170000/2/340000
-101/Tripod/15000/12/180000

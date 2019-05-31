@@ -28,12 +28,29 @@ public class Cancel {
                 if(tb_kamera.getValueAt(i, 0).equals(tb_keranjang.getValueAt(b, 0))){
                     String strstok = tb_kamera.getValueAt(i, 3).toString();
                     int stok = Integer.parseInt(strstok)+cancel;
+                    int harga = Integer.parseInt(tb_keranjang.getValueAt(b,2).toString());
                     tb_kamera.setValueAt(Integer.toString(stok), i, 3);
 
                     if((banyak-cancel)<=0){
                         model1.removeRow(b);
                     }else{
                         tb_keranjang.setValueAt(banyak-cancel,b,3);
+                        tb_keranjang.setValueAt((banyak-cancel)*harga,b,4);
+                    }
+                }
+            }
+            for(int i=0;i<tb_aksesoris.getRowCount();i++){
+                if(tb_aksesoris.getValueAt(i, 0).equals(tb_keranjang.getValueAt(b, 0))){
+                    String strstok = tb_aksesoris.getValueAt(i, 3).toString();
+                    int stok = Integer.parseInt(strstok)+cancel;
+                    int harga = Integer.parseInt(tb_keranjang.getValueAt(b,2).toString());
+                    tb_aksesoris.setValueAt(Integer.toString(stok), i, 3);
+
+                    if((banyak-cancel)<=0){
+                        model1.removeRow(b);
+                    }else{
+                        tb_keranjang.setValueAt(banyak-cancel,b,3);
+                        tb_keranjang.setValueAt((banyak-cancel)*harga,b,4);
                     }
                 }
             }
