@@ -5,6 +5,8 @@
  */
 package camera_rent;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author M . FR
@@ -27,6 +29,7 @@ public class Datadiri extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -35,8 +38,8 @@ public class Datadiri extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        rb_laki = new javax.swing.JRadioButton();
+        rb_perem = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
@@ -86,18 +89,25 @@ public class Datadiri extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(190, 290, 540, 80);
 
-        jRadioButton1.setText("LAKI - LAKI");
-        getContentPane().add(jRadioButton1);
-        jRadioButton1.setBounds(190, 380, 93, 23);
-
-        jRadioButton2.setText("PEREMPUAN");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+        buttonGroup1.add(rb_laki);
+        rb_laki.setText("LAKI - LAKI");
+        rb_laki.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rb_lakiMouseClicked(evt);
             }
         });
-        getContentPane().add(jRadioButton2);
-        jRadioButton2.setBounds(570, 380, 110, 23);
+        getContentPane().add(rb_laki);
+        rb_laki.setBounds(190, 380, 93, 23);
+
+        buttonGroup1.add(rb_perem);
+        rb_perem.setText("PEREMPUAN");
+        rb_perem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rb_peremActionPerformed(evt);
+            }
+        });
+        getContentPane().add(rb_perem);
+        rb_perem.setBounds(570, 380, 110, 23);
 
         jButton1.setText("Selanjutnya");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -113,12 +123,22 @@ public class Datadiri extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
+        jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField4KeyTyped(evt);
+            }
+        });
         getContentPane().add(jTextField4);
         jTextField4.setBounds(190, 190, 540, 30);
 
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField5ActionPerformed(evt);
+            }
+        });
+        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField5KeyTyped(evt);
             }
         });
         getContentPane().add(jTextField5);
@@ -148,9 +168,9 @@ public class Datadiri extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void rb_peremActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_peremActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_rb_peremActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Pembayaran p = new Pembayaran();
@@ -166,6 +186,31 @@ public class Datadiri extends javax.swing.JFrame {
         p.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
+        // TODO add your handling code here:
+        char character = evt.getKeyChar();
+        if(!(Character.isDigit(character))){
+            evt.consume();
+        }
+       
+    }//GEN-LAST:event_jTextField4KeyTyped
+
+    private void rb_lakiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rb_lakiMouseClicked
+        // TODO add your handling code here:
+        if(rb_laki.isSelected()){
+            rb_laki.setVisible(true);
+        }
+        
+    }//GEN-LAST:event_rb_lakiMouseClicked
+
+    private void jTextField5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyTyped
+        // TODO add your handling code here:
+        char karakter = evt.getKeyChar();
+        if(!(Character.isDigit(karakter))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField5KeyTyped
 
     /**
      * @param args the command line arguments
@@ -203,6 +248,7 @@ public class Datadiri extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
@@ -210,12 +256,12 @@ public class Datadiri extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JRadioButton rb_laki;
+    private javax.swing.JRadioButton rb_perem;
     // End of variables declaration//GEN-END:variables
 }

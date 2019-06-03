@@ -66,7 +66,7 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel1.setText("Data Pesanan :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 200, 130, 24);
+        jLabel1.setBounds(70, 200, 130, 19);
 
         jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel2.setText("Lama Peminjaman :");
@@ -114,7 +114,7 @@ public class Penyewaan extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(740, 460, 100, 30);
+        jButton2.setBounds(750, 460, 90, 30);
 
         jLabel7.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
         jLabel7.setText("SubTotal");
@@ -132,7 +132,7 @@ public class Penyewaan extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(640, 460, 90, 30);
+        jButton1.setBounds(650, 460, 90, 30);
 
         jButton3.setText("Hitung");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +141,7 @@ public class Penyewaan extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(540, 460, 90, 30);
+        jButton3.setBounds(550, 460, 90, 30);
 
         pack();
         setLocationRelativeTo(null);
@@ -174,7 +174,7 @@ public class Penyewaan extends javax.swing.JFrame {
         int sutot = Integer.parseInt(t_subtotal.getText());
         int hir = jmlhari * sutot;
         String akhir = String.valueOf(hir);
-        JOptionPane.showMessageDialog(null, "SEWA " + jmlhari + " hari");
+        JOptionPane.showMessageDialog(null,"SEWA" + jmlhari + " Hari");
         t_akhir.setText(akhir);
     }//GEN-LAST:event_jButton3ActionPerformed
 
