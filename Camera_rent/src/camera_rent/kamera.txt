@@ -1,2 +1,4 @@
 No,Nama Barang, Harga,Stok
-001/Sony a7s mkII /170000/2
+101/Tripod/15000/20
+102/Lighting/50000/20
+104/wew/20000/4
