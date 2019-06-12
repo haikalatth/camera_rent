@@ -5,6 +5,8 @@
  */
 package camera_rent;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,12 +14,22 @@ import javax.swing.JOptionPane;
  * @author M . FR
  */
 public class Datadiri extends javax.swing.JFrame {
-
+String a,b,c,d,e;
+Object[] id,nb;
+int baris;
     /**
      * Creates new form Datadiri
      */
     public Datadiri() {
         initComponents();
+    }
+
+    Datadiri(int row, List list, List nama, String pinjam, String kembali) {
+        baris = row;
+        id = list.toArray();
+        nb = nama.toArray();
+        d = pinjam;
+        e = kembali;
     }
 
     /**
@@ -35,12 +47,12 @@ public class Datadiri extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        t_nama = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         rb_laki = new javax.swing.JRadioButton();
         rb_perem = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        btn_lanjut = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
@@ -74,13 +86,13 @@ public class Datadiri extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(70, 380, 90, 20);
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        t_nama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                t_namaActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(190, 240, 540, 30);
+        getContentPane().add(t_nama);
+        t_nama.setBounds(190, 240, 540, 30);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -97,7 +109,7 @@ public class Datadiri extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rb_laki);
-        rb_laki.setBounds(190, 380, 93, 23);
+        rb_laki.setBounds(190, 380, 93, 22);
 
         buttonGroup1.add(rb_perem);
         rb_perem.setText("PEREMPUAN");
@@ -107,16 +119,16 @@ public class Datadiri extends javax.swing.JFrame {
             }
         });
         getContentPane().add(rb_perem);
-        rb_perem.setBounds(570, 380, 110, 23);
+        rb_perem.setBounds(570, 380, 110, 22);
 
-        jButton1.setText("Selanjutnya");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_lanjut.setText("Selanjutnya");
+        btn_lanjut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(530, 450, 100, 30);
+        getContentPane().add(btn_lanjut);
+        btn_lanjut.setBounds(530, 450, 100, 30);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,9 +168,9 @@ public class Datadiri extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void t_namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_namaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_t_namaActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
@@ -172,12 +184,19 @@ public class Datadiri extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rb_peremActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_lanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_lanjutActionPerformed
+        a = t_nama.getText();
+        List list = new ArrayList<>();
+        for(int i=0;i<baris;i++){
+            b = id[i].toString();
+            c = nb[i].toString();
+            //tinggal tulis di txt
+        }
         Pembayaran p = new Pembayaran();
         p.setVisible(true);
         p.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_lanjutActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -248,8 +267,8 @@ public class Datadiri extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_lanjut;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -258,10 +277,10 @@ public class Datadiri extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JRadioButton rb_laki;
     private javax.swing.JRadioButton rb_perem;
+    private javax.swing.JTextField t_nama;
     // End of variables declaration//GEN-END:variables
 }

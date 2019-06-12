@@ -7,8 +7,10 @@ package camera_rent;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -66,7 +68,7 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel1.setText("Data Pesanan :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 200, 130, 19);
+        jLabel1.setBounds(70, 200, 130, 22);
 
         jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel2.setText("Lama Peminjaman :");
@@ -104,6 +106,12 @@ public class Penyewaan extends javax.swing.JFrame {
         jScrollPane1.setBounds(200, 200, 640, 190);
         getContentPane().add(tgl_pinjam);
         tgl_pinjam.setBounds(280, 420, 160, 30);
+
+        tgl_kembali.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                tgl_kembaliPropertyChange(evt);
+            }
+        });
         getContentPane().add(tgl_kembali);
         tgl_kembali.setBounds(280, 460, 160, 30);
 
@@ -157,7 +165,18 @@ public class Penyewaan extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        Datadiri dat = new Datadiri();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        String pinjam = sdf.format(tgl_pinjam.getDate()).toString();
+        String kembali = sdf.format(tgl_kembali.getDate()).toString();
+        int row = tb_keranjang.getRowCount();
+        List list = new ArrayList<>();
+        List nama = new ArrayList<>();
+        for(int i=0;i<row;i++){
+            list.add(tb_keranjang.getValueAt(i,0).toString());
+            list.add(tb_keranjang.getValueAt(i,1).toString());
+        }        
+        
+        Datadiri dat = new Datadiri(row,list,nama,pinjam,kembali);
         dat.setVisible(true);
         dat.setLocationRelativeTo(null);
         this.dispose();
@@ -177,6 +196,14 @@ public class Penyewaan extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null,"SEWA" + jmlhari + " Hari");
         t_akhir.setText(akhir);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void tgl_kembaliPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tgl_kembaliPropertyChange
+        if(tgl_kembali.getDate() != null){
+            Total total = new Total();
+            total.akhir(tgl_pinjam,tgl_kembali,t_akhir,t_subtotal);
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tgl_kembaliPropertyChange
 
     /**
      * @param args the command line arguments
