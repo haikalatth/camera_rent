@@ -5,6 +5,14 @@
  */
 package camera_rent;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Asus
@@ -14,8 +22,37 @@ public class Pengembalian extends javax.swing.JFrame {
     /**
      * Creates new form Pengembalian
      */
+    
+    String url;
+    File file;
+    BufferedReader br;
+    DefaultTableModel model;
+    
+    
+    
     public Pengembalian() {
         initComponents();
+        loadData();
+    }
+    public void loadData(){
+        url = "src/camera_rent/datasewa.txt";
+        file = new File(url);
+        try {
+            br  = new BufferedReader(new FileReader(file));
+            String barispertama = br.readLine();
+            String[] namaKolom = barispertama.split(",");
+            model = (DefaultTableModel) tb_pengembalian.getModel();
+            model.setColumnIdentifiers(namaKolom);
+            
+            Object[] dataBaris = br.lines().toArray();
+            for (int i = 0; i < dataBaris.length; i++) {
+                String baris = dataBaris[i].toString();
+                String[] data = baris.split("/");
+                model.addRow(data);
+            }
+        } catch (Exception e) {
+        }
+        
     }
 
     /**
@@ -28,13 +65,13 @@ public class Pengembalian extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tb_pengembalian = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tb_pengembalian.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -42,7 +79,7 @@ public class Pengembalian extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tb_pengembalian);
 
         jButton1.setText("OK");
 
@@ -78,6 +115,30 @@ public class Pengembalian extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+   
+    public void loadPengembalian(){
+        File file = new File("src/camera_rent/datasewa.txt");
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String barispertama = br.readLine();
+            String[] namaKolom = barispertama.split("/");
+            DefaultTableModel model = (DefaultTableModel) tb_pengembalian.getModel();
+            model.setColumnIdentifiers(namaKolom);
+
+            Object[] dataBaris = br.lines().toArray();
+            for (int i = 0; i < dataBaris.length; i++) {
+                String baris = dataBaris[i].toString();
+                String[] data = baris.split("/");
+                model.addRow(data);
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "a");
+        }
+        
+    }
+    
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -114,6 +175,6 @@ public class Pengembalian extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tb_pengembalian;
     // End of variables declaration//GEN-END:variables
 }

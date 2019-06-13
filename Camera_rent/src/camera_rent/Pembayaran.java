@@ -63,20 +63,20 @@ public class Pembayaran extends javax.swing.JFrame {
         getContentPane().add(jLabel6);
         jLabel6.setBounds(70, 210, 70, 20);
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(320, 290, 160, 20);
+        jLabel1.setBounds(320, 290, 430, 20);
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(320, 380, 160, 20);
+        jLabel7.setBounds(320, 380, 430, 20);
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(320, 210, 160, 20);
+        jLabel8.setBounds(320, 210, 430, 20);
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(320, 340, 160, 20);
+        jLabel9.setBounds(320, 340, 430, 20);
 
         jLabel10.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel10.setText("Total Harga");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(70, 340, 100, 20);
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(320, 250, 160, 20);
+        jLabel11.setBounds(320, 250, 430, 20);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton1.setText("OK");
