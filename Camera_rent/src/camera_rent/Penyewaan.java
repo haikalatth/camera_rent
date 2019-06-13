@@ -58,8 +58,7 @@ public class Penyewaan extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         t_subtotal = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btn_lanjut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 540));
@@ -133,23 +132,14 @@ public class Penyewaan extends javax.swing.JFrame {
         getContentPane().add(t_subtotal);
         t_subtotal.setBounds(590, 424, 80, 30);
 
-        jButton1.setText("Selanjutnya");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_lanjut.setText("Selanjutnya");
+        btn_lanjut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_lanjutActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(650, 460, 90, 30);
-
-        jButton3.setText("Hitung");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton3);
-        jButton3.setBounds(550, 460, 90, 30);
+        getContentPane().add(btn_lanjut);
+        btn_lanjut.setBounds(650, 460, 90, 30);
 
         pack();
         setLocationRelativeTo(null);
@@ -163,7 +153,7 @@ public class Penyewaan extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_lanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_lanjutActionPerformed
         // TODO add your handling code here:
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         String pinjam = sdf.format(tgl_pinjam.getDate()).toString();
@@ -173,29 +163,16 @@ public class Penyewaan extends javax.swing.JFrame {
         List nama = new ArrayList<>();
         for(int i=0;i<row;i++){
             list.add(tb_keranjang.getValueAt(i,0).toString());
-            list.add(tb_keranjang.getValueAt(i,1).toString());
-        }        
+            System.out.println(tb_keranjang.getValueAt(i,0).toString());
+            nama.add(tb_keranjang.getValueAt(i,1).toString());
+            System.out.println(tb_keranjang.getValueAt(i,1).toString());
+        }       
         
         Datadiri dat = new Datadiri(row,list,nama,pinjam,kembali);
         dat.setVisible(true);
         dat.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Date tglkembali = tgl_kembali.getDate();
-        Date tglpinjam = tgl_pinjam.getDate();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-        int pinjam1 = Integer.parseInt(sdf.format(tglpinjam));
-        int kembali1 = Integer.parseInt(sdf.format(tglkembali));
-        jmlhari = kembali1 - pinjam1;
-        int sutot = Integer.parseInt(t_subtotal.getText());
-        int hir = jmlhari * sutot;
-        String akhir = String.valueOf(hir);
-        JOptionPane.showMessageDialog(null,"SEWA" + jmlhari + " Hari");
-        t_akhir.setText(akhir);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btn_lanjutActionPerformed
 
     private void tgl_kembaliPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tgl_kembaliPropertyChange
         if(tgl_kembali.getDate() != null){
@@ -241,9 +218,8 @@ public class Penyewaan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btn_lanjut;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

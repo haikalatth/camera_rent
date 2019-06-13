@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class Total {
     int jmlhari;
-    public void akhir(JDateChooser tgl_kembali, JDateChooser tgl_pinjam, JLabel t_akhir, JLabel t_subtotal){
+    public void akhir(JDateChooser tgl_pinjam, JDateChooser tgl_kembali, JLabel t_akhir, JLabel t_subtotal){
         Date tglkembali = tgl_kembali.getDate();
         Date tglpinjam = tgl_pinjam.getDate();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
@@ -27,7 +27,7 @@ public class Total {
         int sutot = Integer.parseInt(t_subtotal.getText());
         int hir = jmlhari * sutot;
         String akhir = String.valueOf(hir);
-        JOptionPane.showMessageDialog(null, "SEWA " + jmlhari + " hari");
+        //JOptionPane.showMessageDialog(null, "SEWA " + jmlhari + " hari");
         t_akhir.setText(akhir);
     }
 }

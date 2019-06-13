@@ -5,6 +5,11 @@
  */
 package camera_rent;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -17,6 +22,7 @@ public class Datadiri extends javax.swing.JFrame {
 String a,b,c,d,e;
 Object[] id,nb;
 int baris;
+BufferedWriter bw;
     /**
      * Creates new form Datadiri
      */
@@ -25,6 +31,7 @@ int baris;
     }
 
     Datadiri(int row, List list, List nama, String pinjam, String kembali) {
+        initComponents();
         baris = row;
         id = list.toArray();
         nb = nama.toArray();
@@ -186,12 +193,26 @@ int baris;
 
     private void btn_lanjutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_lanjutActionPerformed
         a = t_nama.getText();
+        //System.out.println(id[0].toString());
+        //System.out.println(nb[0].toString());
         List list = new ArrayList<>();
         for(int i=0;i<baris;i++){
             b = id[i].toString();
             c = nb[i].toString();
-            //tinggal tulis di txt
+            list.add(b+"/"+c+"/"+a+"/"+d+"/"+e);
+            
+            File file = new File("src/camera_rent/datasewa.txt");
+            try {
+                PrintWriter out = new PrintWriter(new BufferedWriter(
+                        new FileWriter(file, true)));
+                out.println(b+"/"+c+"/"+a+"/"+d+"/"+e);
+                out.close();
+            } catch (IOException e) {
+                System.out.println("Gagal menulis ke file " + file);
+                e.printStackTrace();
+            }
         }
+           
         Pembayaran p = new Pembayaran();
         p.setVisible(true);
         p.setLocationRelativeTo(null);
