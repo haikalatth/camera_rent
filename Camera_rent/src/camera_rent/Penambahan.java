@@ -285,14 +285,14 @@ public class Penambahan extends javax.swing.JFrame {
 
     private void tambah_kameraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambah_kameraActionPerformed
         // TODO add your handling code here:
-        LoadData lt = new LoadData();
-        lt.tambahKamera(tb_kamera, kamera_no, kamera_nb, kamera_hrg, kamera_jb);
+        TambahData td = new TambahData();
+        td.tambahKamera(tb_kamera, kamera_no, kamera_nb, kamera_hrg, kamera_jb);
     }//GEN-LAST:event_tambah_kameraActionPerformed
 
     private void tambah_aksesorisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambah_aksesorisActionPerformed
         // TODO add your handling code here:
-        LoadData lt = new LoadData();
-        lt.tambahAksesoris(tb_aksesoris, aksesoris_no, aksesoris_nb, aksesoris_hrg, aksesoris_jb);
+        TambahData td = new TambahData();
+        td.tambahAksesoris(tb_aksesoris, aksesoris_no, aksesoris_nb, aksesoris_hrg, aksesoris_jb);
     }//GEN-LAST:event_tambah_aksesorisActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

@@ -1,2 +1,2 @@
 Kode,Nama Barang,Harga,Banyak,Total
-101/Tripod/15000/2/30000
+104/wew/20000/2/40000
