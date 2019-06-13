@@ -16,8 +16,10 @@ import javax.swing.JOptionPane;
  * @author Asus
  */
 public class Total {
+
     int jmlhari;
-    public void akhir(JDateChooser tgl_pinjam, JDateChooser tgl_kembali, JLabel t_akhir, JLabel t_subtotal){
+
+    public void akhir(JDateChooser tgl_pinjam, JDateChooser tgl_kembali, JLabel t_akhir, JLabel t_subtotal) {
         Date tglkembali = tgl_kembali.getDate();
         Date tglpinjam = tgl_pinjam.getDate();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");

@@ -12,16 +12,18 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Asus
  */
 public class TambahData {
+
     File file;
     BufferedWriter bw;
     DefaultTableModel model;
     DefaultTableModel model2;
-    
+
     public void updateKamera(JTable tb_kamera) {
         try {
             file = new File("src/camera_rent/kamera.txt");
@@ -72,7 +74,7 @@ public class TambahData {
             kamera_jb.setText("");
         }
     }
-    
+
     public void updateAksesoris(JTable tb_aksesoris) {
         try {
             file = new File("src/camera_rent/aksesoris.txt");
@@ -102,7 +104,7 @@ public class TambahData {
         ld.loadKamera(tb_aksesoris);
     }
 
-    public void tambahAksesoris(JTable tb_aksesoris, JTextField aksesoris_no, JTextField aksesoris_nb, 
+    public void tambahAksesoris(JTable tb_aksesoris, JTextField aksesoris_no, JTextField aksesoris_nb,
             JTextField aksesoris_hrg, JTextField aksesoris_jb) {
         Object[] tambah = new Object[4];
         tambah[0] = aksesoris_no.getText();
@@ -116,7 +118,7 @@ public class TambahData {
             model2 = (DefaultTableModel) tb_aksesoris.getModel();
             model2.addRow(tambah);
             TambahData td = new TambahData();
-            td.updateKamera(tb_aksesoris);
+            td.updateAksesoris(tb_aksesoris);
             aksesoris_no.setText("");
             aksesoris_nb.setText("");
             aksesoris_hrg.setText("");

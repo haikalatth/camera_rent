@@ -12,7 +12,9 @@ import javax.swing.JFrame;
  * @author micin
  */
 public class Dashboard extends javax.swing.JFrame {
-int row;
+
+    int row;
+
     /**
      * Creates new form Dashboard
      */
@@ -167,13 +169,13 @@ int row;
     private void tb_kameraMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb_kameraMouseClicked
         row = tb_kamera.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
-        mk.tambahKamera(tb_kamera,tb_keranjang,row);
+        mk.tambahKamera(tb_kamera, tb_keranjang, row);
     }//GEN-LAST:event_tb_kameraMouseClicked
 
     private void bt_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cancelMouseClicked
         int b = tb_keranjang.getSelectedRow();
         Cancel ca = new Cancel();
-        ca.batal(tb_keranjang,tb_kamera,tb_aksesoris,b);
+        ca.batal(tb_keranjang, tb_kamera, tb_aksesoris, b);
 //        SubTotal st = new SubTotal();
 //        st.tambah(tb_keranjang, t_subtotal);
         //ca.stok(tb_kamera,row);
@@ -183,7 +185,7 @@ int row;
         // TODO add your handling code here:
         row = tb_aksesoris.getSelectedRow();
         MasukKeranjang mk = new MasukKeranjang();
-        mk.tambahAksesoris(tb_aksesoris,tb_keranjang,row);
+        mk.tambahAksesoris(tb_aksesoris, tb_keranjang, row);
     }//GEN-LAST:event_tb_aksesorisMouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

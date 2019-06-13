@@ -2,3 +2,4 @@ No,Nama Barang, Harga,Stok
 101/Tripod/15000/20
 102/Lighting/50000/20
 104/wew/20000/4
+001/sony/25000/2

@@ -31,9 +31,6 @@ public class Penyewaan extends javax.swing.JFrame {
 
         SubTotal st = new SubTotal();
         st.tambah(tb_keranjang, t_subtotal);
-        
-//        Total tot = new Total();
-//        tot.akhir(tgl_kembali, tgl_pinjam, t_akhir, t_subtotal);
     }
 
     /**
@@ -161,23 +158,23 @@ public class Penyewaan extends javax.swing.JFrame {
         int row = tb_keranjang.getRowCount();
         List list = new ArrayList<>();
         List nama = new ArrayList<>();
-        for(int i=0;i<row;i++){
-            list.add(tb_keranjang.getValueAt(i,0).toString());
-            System.out.println(tb_keranjang.getValueAt(i,0).toString());
-            nama.add(tb_keranjang.getValueAt(i,1).toString());
-            System.out.println(tb_keranjang.getValueAt(i,1).toString());
-        }       
-        
-        Datadiri dat = new Datadiri(row,list,nama,pinjam,kembali);
+        for (int i = 0; i < row; i++) {
+            list.add(tb_keranjang.getValueAt(i, 0).toString());
+            System.out.println(tb_keranjang.getValueAt(i, 0).toString());
+            nama.add(tb_keranjang.getValueAt(i, 1).toString());
+            System.out.println(tb_keranjang.getValueAt(i, 1).toString());
+        }
+
+        Datadiri dat = new Datadiri(row, list, nama, pinjam, kembali);
         dat.setVisible(true);
         dat.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btn_lanjutActionPerformed
 
     private void tgl_kembaliPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_tgl_kembaliPropertyChange
-        if(tgl_kembali.getDate() != null){
+        if (tgl_kembali.getDate() != null) {
             Total total = new Total();
-            total.akhir(tgl_pinjam,tgl_kembali,t_akhir,t_subtotal);
+            total.akhir(tgl_pinjam, tgl_kembali, t_akhir, t_subtotal);
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_tgl_kembaliPropertyChange
