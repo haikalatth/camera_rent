@@ -1,2 +1,2 @@
 Kode,Nama Barang,Harga,Banyak,Total
-001/sony/25000/1/25000
+101/Tripod/15000/1/15000

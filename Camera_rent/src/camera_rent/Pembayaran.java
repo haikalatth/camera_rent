@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author M . FR
  */
 public class Pembayaran extends javax.swing.JFrame {
-int tglkembali,total;
+int tglkembali,tot;
     /**
      * Creates new form Pembayaran
      */
@@ -22,12 +22,14 @@ int tglkembali,total;
     
     public Pembayaran(String a, String f, int total, String e){
         initComponents();
+        tot = total;
         l_nama.setText(a);
         l_nohp.setText(f);
         t_total.setText(Integer.toString(total));
         t_kembali.setText(e);
         LoadData ld = new LoadData();
         ld.loadKeranjang(tb_keranjang);
+        b_ok.setVisible(false);
     }
 
 
@@ -49,13 +51,14 @@ int tglkembali,total;
         t_total = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         l_nohp = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        b_ok = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tb_keranjang = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        t_tunai = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        l_kembali = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 540));
@@ -95,15 +98,15 @@ int tglkembali,total;
         getContentPane().add(l_nohp);
         l_nohp.setBounds(300, 170, 430, 20);
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setText("OK");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        b_ok.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        b_ok.setText("OK");
+        b_ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                b_okActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(660, 470, 100, 40);
+        getContentPane().add(b_ok);
+        b_ok.setBounds(660, 470, 100, 40);
 
         tb_keranjang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -116,31 +119,51 @@ int tglkembali,total;
         jScrollPane1.setViewportView(tb_keranjang);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(300, 210, 453, 100);
+        jScrollPane1.setBounds(300, 210, 452, 100);
 
         jLabel1.setText("Tunai");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(50, 350, 220, 30);
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(300, 350, 460, 30);
+        getContentPane().add(t_tunai);
+        t_tunai.setBounds(300, 350, 460, 30);
 
         jLabel2.setText("Kembalian");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(50, 390, 220, 30);
-        getContentPane().add(jLabel12);
-        jLabel12.setBounds(300, 400, 460, 20);
+        getContentPane().add(l_kembali);
+        l_kembali.setBounds(300, 390, 460, 30);
+
+        jButton2.setText("Hitung");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2);
+        jButton2.setBounds(510, 470, 130, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void b_okActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_okActionPerformed
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(null, "Terima Kasih telah berlangganan di toko kami");
         Home ho = new Home();
         ho.setVisible(true);
         ho.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_b_okActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int dbyr = tot;
+        int byr = Integer.parseInt(t_tunai.getText());
+        int kembali = byr-dbyr;
+        String valuekembali = String.valueOf(kembali);
+        this.l_kembali.setText(valuekembali);
+        t_tunai.setVisible(true);
+        b_ok.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,21 +201,22 @@ int tglkembali,total;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton b_ok;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel l_kembali;
     private javax.swing.JLabel l_nama;
     private javax.swing.JLabel l_nohp;
     private javax.swing.JLabel t_kembali;
     private javax.swing.JLabel t_total;
+    private javax.swing.JTextField t_tunai;
     private javax.swing.JTable tb_keranjang;
     // End of variables declaration//GEN-END:variables
 }
