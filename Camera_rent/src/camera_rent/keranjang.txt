@@ -1,2 +1,2 @@
 Kode,Nama Barang,Harga,Banyak,Total
-104/wew/20000/1/20000
+102/Lighting/50000/1/50000

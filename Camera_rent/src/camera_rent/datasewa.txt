@@ -2,3 +2,4 @@ No,Nama Barang,Nama,Tanggal Pinjam,Tanggal Pengembalian
 101/Tripod/haikal/14-06-2019/15-06-2019
 101/Tripod/micin/14-06-2019/15-06-2019
 104/wew/naufal/13-06-2019/15-06-2019
+102/Lighting/drake/15-06-2019/16-06-2019

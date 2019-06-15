@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
  * @author M . FR
  */
 public class Datadiri extends javax.swing.JFrame {
-String a,b,c,d,e;
+String a,b,c,d,e,f;
 Object[] id,nb;
 int baris;
 BufferedWriter bw;
@@ -61,7 +61,7 @@ BufferedWriter bw;
         rb_perem = new javax.swing.JRadioButton();
         btn_lanjut = new javax.swing.JButton();
         jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        t_nohp = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -92,12 +92,6 @@ BufferedWriter bw;
         jLabel6.setText("Jenis Kelamin");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(70, 380, 90, 20);
-
-        t_nama.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                t_namaActionPerformed(evt);
-            }
-        });
         getContentPane().add(t_nama);
         t_nama.setBounds(190, 240, 540, 30);
 
@@ -116,7 +110,7 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(rb_laki);
-        rb_laki.setBounds(190, 380, 93, 22);
+        rb_laki.setBounds(190, 380, 93, 23);
 
         buttonGroup1.add(rb_perem);
         rb_perem.setText("PEREMPUAN");
@@ -126,7 +120,7 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(rb_perem);
-        rb_perem.setBounds(570, 380, 110, 22);
+        rb_perem.setBounds(570, 380, 110, 23);
 
         btn_lanjut.setText("Selanjutnya");
         btn_lanjut.addActionListener(new java.awt.event.ActionListener() {
@@ -137,11 +131,6 @@ BufferedWriter bw;
         getContentPane().add(btn_lanjut);
         btn_lanjut.setBounds(530, 450, 100, 30);
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
         jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField4KeyTyped(evt);
@@ -150,18 +139,13 @@ BufferedWriter bw;
         getContentPane().add(jTextField4);
         jTextField4.setBounds(190, 190, 540, 30);
 
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-        jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
+        t_nohp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField5KeyTyped(evt);
+                t_nohpKeyTyped(evt);
             }
         });
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(190, 410, 540, 30);
+        getContentPane().add(t_nohp);
+        t_nohp.setBounds(190, 410, 540, 30);
 
         jButton2.setText("Kembali");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -174,18 +158,6 @@ BufferedWriter bw;
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void t_namaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_namaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_t_namaActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void rb_peremActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_peremActionPerformed
         // TODO add your handling code here:
@@ -212,8 +184,9 @@ BufferedWriter bw;
                 e.printStackTrace();
             }
         }
-           
-        Pembayaran p = new Pembayaran();
+
+        f=t_nohp.getText();
+        Pembayaran p = new Pembayaran(a, f);
         p.setVisible(true);
         p.setLocationRelativeTo(null);
         this.dispose();
@@ -244,13 +217,13 @@ BufferedWriter bw;
         
     }//GEN-LAST:event_rb_lakiMouseClicked
 
-    private void jTextField5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyTyped
+    private void t_nohpKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_t_nohpKeyTyped
         // TODO add your handling code here:
         char karakter = evt.getKeyChar();
         if(!(Character.isDigit(karakter))){
             evt.consume();
         }
-    }//GEN-LAST:event_jTextField5KeyTyped
+    }//GEN-LAST:event_t_nohpKeyTyped
 
     /**
      * @param args the command line arguments
@@ -299,9 +272,9 @@ BufferedWriter bw;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JRadioButton rb_laki;
     private javax.swing.JRadioButton rb_perem;
     private javax.swing.JTextField t_nama;
+    private javax.swing.JTextField t_nohp;
     // End of variables declaration//GEN-END:variables
 }
