@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author M . FR
  */
 public class Pembayaran extends javax.swing.JFrame {
-
+int tglkembali,total;
     /**
      * Creates new form Pembayaran
      */
@@ -20,13 +20,16 @@ public class Pembayaran extends javax.swing.JFrame {
         initComponents();
     }
     
-    public Pembayaran(String a, String f){
+    public Pembayaran(String a, String f, int total, String e){
         initComponents();
         l_nama.setText(a);
         l_nohp.setText(f);
+        t_total.setText(Integer.toString(total));
+        t_kembali.setText(e);
         LoadData ld = new LoadData();
         ld.loadKeranjang(tb_keranjang);
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,9 +44,9 @@ public class Pembayaran extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        t_kembali = new javax.swing.JLabel();
         l_nama = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        t_total = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         l_nohp = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
@@ -78,12 +81,12 @@ public class Pembayaran extends javax.swing.JFrame {
         jLabel6.setText("NAMA ");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(50, 130, 70, 20);
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(300, 430, 430, 20);
+        getContentPane().add(t_kembali);
+        t_kembali.setBounds(300, 430, 430, 20);
         getContentPane().add(l_nama);
         l_nama.setBounds(300, 130, 430, 20);
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(300, 320, 430, 20);
+        getContentPane().add(t_total);
+        t_total.setBounds(300, 320, 430, 20);
 
         jLabel10.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel10.setText("TOTAL");
@@ -113,7 +116,7 @@ public class Pembayaran extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tb_keranjang);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(300, 210, 452, 100);
+        jScrollPane1.setBounds(300, 210, 453, 100);
 
         jLabel1.setText("Tunai");
         getContentPane().add(jLabel1);
@@ -184,12 +187,12 @@ public class Pembayaran extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel l_nama;
     private javax.swing.JLabel l_nohp;
+    private javax.swing.JLabel t_kembali;
+    private javax.swing.JLabel t_total;
     private javax.swing.JTable tb_keranjang;
     // End of variables declaration//GEN-END:variables
 }

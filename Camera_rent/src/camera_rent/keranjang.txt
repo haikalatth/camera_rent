@@ -1,2 +1,2 @@
 Kode,Nama Barang,Harga,Banyak,Total
-102/Lighting/50000/1/50000
+001/sony/25000/1/25000

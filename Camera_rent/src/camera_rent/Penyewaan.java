@@ -164,8 +164,9 @@ public class Penyewaan extends javax.swing.JFrame {
             nama.add(tb_keranjang.getValueAt(i, 1).toString());
             System.out.println(tb_keranjang.getValueAt(i, 1).toString());
         }
-
-        Datadiri dat = new Datadiri(row, list, nama, pinjam, kembali);
+        Total total = new Total();
+        int tot = total.akhir(tgl_pinjam, tgl_kembali, t_akhir, t_subtotal);
+        Datadiri dat = new Datadiri(row, list, nama, pinjam, kembali, tot);
         dat.setVisible(true);
         dat.setLocationRelativeTo(null);
         this.dispose();
@@ -175,6 +176,7 @@ public class Penyewaan extends javax.swing.JFrame {
         if (tgl_kembali.getDate() != null) {
             Total total = new Total();
             total.akhir(tgl_pinjam, tgl_kembali, t_akhir, t_subtotal);
+            
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_tgl_kembaliPropertyChange

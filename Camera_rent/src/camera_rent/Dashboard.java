@@ -184,7 +184,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void bt_cancelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cancelMouseClicked
         int b = tb_keranjang.getSelectedRow();
-        Cancel ca = new Cancel();
+        Stok ca = new Stok();
         ca.batal(tb_keranjang, tb_kamera, tb_aksesoris, b);
 //        SubTotal st = new SubTotal();
 //        st.tambah(tb_keranjang, t_subtotal);

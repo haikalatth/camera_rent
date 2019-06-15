@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Asus
  */
-public class Cancel {
+public class Stok {
     DefaultTableModel model1;
     public void batal(JTable tb_keranjang, JTable tb_kamera, JTable tb_aksesoris, int b) {
         String cncl = JOptionPane.showInputDialog(null,"Berapa yang dibatalkan?");
@@ -56,6 +56,28 @@ public class Cancel {
             }
         }
         
+        
+    }
+    public void pengembalian(JTable tb_pengembalian, JTable tb_kamera, JTable tb_aksesoris, int b) {
+        
+            model1 = (DefaultTableModel)tb_pengembalian.getModel();
+            for(int i=0;i<tb_kamera.getRowCount();i++){
+                if(tb_kamera.getValueAt(i, 0).equals(tb_pengembalian.getValueAt(b, 0))){
+                    String strstok = tb_kamera.getValueAt(i, 3).toString();
+                    int stok = Integer.parseInt(strstok)+1;
+                    tb_kamera.setValueAt(Integer.toString(stok), i, 3);
+                    model1.removeRow(b);
+                }
+            }
+            for(int i=0;i<tb_aksesoris.getRowCount();i++){
+                if(tb_aksesoris.getValueAt(i, 0).equals(tb_pengembalian.getValueAt(b, 0))){
+                    String strstok = tb_aksesoris.getValueAt(i, 3).toString();
+                    int stok = Integer.parseInt(strstok)+1;
+                    tb_aksesoris.setValueAt(Integer.toString(stok), i, 3);
+                    model1.removeRow(b);
+
+                }
+            }        
         
     }
 }

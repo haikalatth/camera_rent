@@ -19,7 +19,7 @@ public class Total {
 
     int jmlhari;
 
-    public void akhir(JDateChooser tgl_pinjam, JDateChooser tgl_kembali, JLabel t_akhir, JLabel t_subtotal) {
+    public int akhir(JDateChooser tgl_pinjam, JDateChooser tgl_kembali, JLabel t_akhir, JLabel t_subtotal) {
         Date tglkembali = tgl_kembali.getDate();
         Date tglpinjam = tgl_pinjam.getDate();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
@@ -31,5 +31,6 @@ public class Total {
         String akhir = String.valueOf(hir);
         //JOptionPane.showMessageDialog(null, "SEWA " + jmlhari + " hari");
         t_akhir.setText(akhir);
+        return hir;
     }
 }

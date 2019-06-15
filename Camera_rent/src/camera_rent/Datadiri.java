@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 public class Datadiri extends javax.swing.JFrame {
 String a,b,c,d,e,f;
 Object[] id,nb;
-int baris;
+int baris,total;
 BufferedWriter bw;
     /**
      * Creates new form Datadiri
@@ -30,14 +30,17 @@ BufferedWriter bw;
         initComponents();
     }
 
-    Datadiri(int row, List list, List nama, String pinjam, String kembali) {
+    Datadiri(int row, List list, List nama, String pinjam, String kembali, int tot) {
         initComponents();
         baris = row;
         id = list.toArray();
         nb = nama.toArray();
         d = pinjam;
         e = kembali;
+        total = tot;
     }
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -186,7 +189,7 @@ BufferedWriter bw;
         }
 
         f=t_nohp.getText();
-        Pembayaran p = new Pembayaran(a, f);
+        Pembayaran p = new Pembayaran(a, f, total, e);
         p.setVisible(true);
         p.setLocationRelativeTo(null);
         this.dispose();
