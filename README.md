@@ -22,3 +22,4 @@ Cara penggunaan Aplikasi :
    Fungsi dalam menu ini yaitu, untuk menambah barang yang sebelumnya belum ada di menu Pilih Item. 
   
  ## Note : Sebelum mengclone aplikasi ini, diharap sudah menginstall dan memasang JCalender pada aplikasi compiler java anda.
+![Screenshot 1](https://github.com/haikalatth/camera_rent/blob/master/1.PNG)
