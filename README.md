@@ -15,17 +15,17 @@ Cara penggunaan Aplikasi :
  ![Screenshot 2](https://github.com/haikalatth/camera_rent/blob/master/2.PNG)
    Ketika di menu penyewaan user diminta untuk menentukan hari peminjaman dan hari pengembalian barang. Kemudian program akan menampilkan total harga yang harus dibayarkan dengan jangka waktu yang sudah ditentukan.
  ## 2. Data Diri
- ![Screenshot 3](https://github.com/haikalatth/camera_rent/blob/master/4.PNG)
+ ![Screenshot 3](https://github.com/haikalatth/camera_rent/blob/master/3.PNG)
    Di menu Data diri user diminta untuk memasukkan Data diri dari user
  ## 3. Pembayaran
- ![Screenshot 5](https://github.com/haikalatth/camera_rent/blob/master/5.PNG)
+ ![Screenshot 4](https://github.com/haikalatth/camera_rent/blob/master/4.PNG)
    Di menu ini untuk mengecek data diri yang sudah dimasukkan sebelumnya dan barang apa saja yang sudah dipesan. Kemudian user diminta untuk memasukkan sejumlah uang yang akan dibayarkan. Ketika sudah selesai klik tombol OK.
   
   ## B. Daftar Transaksi
-  ![Screenshot 6](https://github.com/haikalatth/camera_rent/blob/master/6.PNG)
+  ![Screenshot 5](https://github.com/haikalatth/camera_rent/blob/master/5.PNG)
    Menampilkan daftar barang yang sudah dipesan sebelumnya oleh penyewa. Ketika barang sudah kembali, user diminta memilih yang barang yang sudah kembali tersebut kemudian klik tombol Terima Barang. Selanjutnya barang akan kembali ke menu Pilih Item.
  ## C. Tambah Item
- ![Screenshot 7](https://github.com/haikalatth/camera_rent/blob/master/7.PNG)
+ ![Screenshot 6](https://github.com/haikalatth/camera_rent/blob/master/6.PNG)
    Fungsi dalam menu ini yaitu, untuk menambah barang yang sebelumnya belum ada di menu Pilih Item. 
   
  ## Note : Sebelum mengclone aplikasi ini, diharap sudah menginstall dan memasang JCalender pada aplikasi compiler java anda.
