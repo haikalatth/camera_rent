@@ -24,9 +24,9 @@ Cara penggunaan Aplikasi :
   
   ## B. Daftar Transaksi
    Menampilkan daftar barang yang sudah dipesan sebelumnya oleh penyewa. Ketika barang sudah kembali, user diminta memilih yang barang yang sudah kembali tersebut kemudian klik tombol Terima Barang. Selanjutnya barang akan kembali ke menu Pilih Item.
-   ![Screenshot 6](https://github.com/haikalatth/camera_rent/blob/master/6.PNG)
+   ![Screenshot 7](https://github.com/haikalatth/camera_rent/blob/master/7.PNG)
  ## C. Tambah Item
   Fungsi dalam menu ini yaitu, untuk menambah barang yang sebelumnya belum ada di menu Pilih Item. 
-  !![Screenshot 7](https://github.com/haikalatth/camera_rent/blob/master/7.PNG)
+  !![Screenshot 8](https://github.com/haikalatth/camera_rent/blob/master/8.PNG)
   
  ## Note : Sebelum mengclone aplikasi ini, diharap sudah menginstall dan memasang JCalender pada aplikasi compiler java anda.
