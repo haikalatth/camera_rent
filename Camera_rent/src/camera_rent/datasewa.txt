@@ -2,5 +2,6 @@ Kode Barang,Nama Barang,Nama,Tanggal Pinjam,Tanggal Pengembalian
 001/sony/drake/16-06-2019/18-06-2019
 101/Tripod/drake/16-06-2019/18-06-2019
 001/sony/drake/16-06-2019/18-06-2019
-001/sony/wao/16-06-2019/17-06-2019
-101/Tripod/wo/16-06-2019/18-06-2019
+001/sony/drake/16-06-2019/18-06-2019
+101/Tripod/drake/16-06-2019/18-06-2019
+001/sony/drake/16-06-2019/18-06-2019
