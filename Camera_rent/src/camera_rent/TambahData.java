@@ -23,9 +23,40 @@ public class TambahData {
     BufferedWriter bw;
     DefaultTableModel model;
     DefaultTableModel model2;
+    
+    public void updateDatasewa(JTable tb_pengembalian) {
+        try {
+            model = (DefaultTableModel) tb_pengembalian.getModel();
+            file = new File("src/camera_rent/datasewa.txt");
+            bw = new BufferedWriter(new FileWriter(file));
 
+            for (int i = 0; i < tb_pengembalian.getColumnCount(); i++) {
+                if (i > 0) {
+                    bw.write(",");
+                }
+                bw.write(tb_pengembalian.getColumnName(i));
+            }
+            bw.newLine();
+            for (int i = 0; i < tb_pengembalian.getRowCount(); i++) {
+                for (int j = 0; j < tb_pengembalian.getColumnCount(); j++) {
+                    if (j > 0) {
+                        bw.write("/");
+                    }
+                    bw.write(tb_pengembalian.getValueAt(i, j).toString());
+                }
+                bw.newLine();
+            }
+            bw.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "error");
+        }
+        model.getDataVector().removeAllElements();
+        LoadData ld = new LoadData();
+        ld.loadDatasewa(tb_pengembalian);
+    }
     public void updateKamera(JTable tb_kamera) {
         try {
+            model = (DefaultTableModel) tb_kamera.getModel();
             file = new File("src/camera_rent/kamera.txt");
             bw = new BufferedWriter(new FileWriter(file));
 
@@ -49,6 +80,7 @@ public class TambahData {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "error");
         }
+        model.getDataVector().removeAllElements();
         LoadData ld = new LoadData();
         ld.loadKamera(tb_kamera);
     }
@@ -77,6 +109,7 @@ public class TambahData {
 
     public void updateAksesoris(JTable tb_aksesoris) {
         try {
+            model2 = (DefaultTableModel) tb_aksesoris.getModel();
             file = new File("src/camera_rent/aksesoris.txt");
             bw = new BufferedWriter(new FileWriter(file));
 
@@ -100,8 +133,9 @@ public class TambahData {
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "error");
         }
+        model2.getDataVector().removeAllElements();
         LoadData ld = new LoadData();
-        ld.loadKamera(tb_aksesoris);
+        ld.loadAksesoris(tb_aksesoris);
     }
 
     public void tambahAksesoris(JTable tb_aksesoris, JTextField aksesoris_no, JTextField aksesoris_nb,

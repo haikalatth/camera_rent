@@ -1,16 +1,5 @@
-No,Nama Barang,Nama,Tanggal Pinjam,Tanggal Pengembalian
-001/sony/Haikal/21-06-2019/22-06-2019
+Kode Barang,Nama Barang,Nama,Tanggal Pinjam,Tanggal Pengembalian
 001/sony/haisdaj/14-06-2019/15-06-2019
 101/Tripod/drake/16-06-2019/18-06-2019
-102/Lighting/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-101/Tripod/drake/16-06-2019/18-06-2019
-102/Lighting/drake/16-06-2019/17-06-2019
 101/Tripod/drake/16-06-2019/17-06-2019
 101/Tripod/dr/16-06-2019/18-06-2019

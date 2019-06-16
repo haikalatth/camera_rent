@@ -32,31 +32,12 @@ public class Pengembalian extends javax.swing.JFrame {
     
     public Pengembalian() {
         initComponents();
-        loadData();
         LoadData ld = new LoadData();
+        ld.loadDatasewa(tb_pengembalian);
         ld.loadKamera(tb_kamera);
         ld.loadAksesoris(tb_aksesoris);
     }
-    public void loadData(){
-        url = "src/camera_rent/datasewa.txt";
-        file = new File(url);
-        try {
-            br  = new BufferedReader(new FileReader(file));
-            String barispertama = br.readLine();
-            String[] namaKolom = barispertama.split(",");
-            model = (DefaultTableModel) tb_pengembalian.getModel();
-            model.setColumnIdentifiers(namaKolom);
-            
-            Object[] dataBaris = br.lines().toArray();
-            for (int i = 0; i < dataBaris.length; i++) {
-                String baris = dataBaris[i].toString();
-                String[] data = baris.split("/");
-                model.addRow(data);
-            }
-        } catch (Exception e) {
-        }
-        
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -198,9 +179,17 @@ public class Pengembalian extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_terimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_terimaActionPerformed
-        int a = tb_pengembalian.getSelectedRow();
-        Stok stok = new Stok();
-        stok.pengembalian(tb_pengembalian, tb_kamera, tb_aksesoris, a);
+        int jawab = JOptionPane.showOptionDialog(this, "Barang sudah di cek?", "confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+        if(jawab == JOptionPane.YES_OPTION){
+            int a = tb_pengembalian.getSelectedRow();
+            Stok stok = new Stok();
+            stok.pengembalian(tb_pengembalian, tb_kamera, tb_aksesoris, a);
+            TambahData td = new TambahData();
+            td.updateDatasewa(tb_pengembalian);
+            td.updateAksesoris(tb_aksesoris);
+            td.updateKamera(tb_kamera);
+        }
+        
         //Dashboard dashboard = new Dashboard();
         // TODO add your handling code here:
     }//GEN-LAST:event_bt_terimaActionPerformed
