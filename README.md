@@ -23,4 +23,4 @@ Cara penggunaan Aplikasi :
   
  ## Note : Sebelum mengclone aplikasi ini, diharap sudah menginstall dan memasang JCalender pada aplikasi compiler java anda.
 
-![alt text](https://drive.google.com/drive/folders/1GmsraR8egObjl6yuA8CQ-AqFeRYa0beb?usp=sharing)
+https://drive.google.com/drive/folders/1GmsraR8egObjl6yuA8CQ-AqFeRYa0beb?usp=sharing
