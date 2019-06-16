@@ -1,6 +1,7 @@
 No,Nama Barang, Harga,Stok
-001/sony/25000/6
+001/sony/25000/7
 002/canon/30000/4
 003/nikon/20000/3
 004/sony 2/40000/1
 005/canon 2/30000/2
+006/nikon 2/35000/3

@@ -59,44 +59,53 @@ int tglkembali,tot;
         jLabel2 = new javax.swing.JLabel();
         l_kembali = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 540));
         setSize(new java.awt.Dimension(860, 540));
         getContentPane().setLayout(null);
 
-        jLabel3.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel3.setText("DIKEMBALIKAN PADA");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(50, 430, 210, 20);
 
-        jLabel4.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel4.setText("DAFTAR BARANG");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(50, 210, 200, 20);
+        jLabel4.setBounds(50, 220, 200, 20);
 
-        jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel5.setText("NO. HP");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(50, 170, 70, 20);
+        jLabel5.setBounds(50, 180, 70, 20);
 
-        jLabel6.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel6.setText("NAMA ");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(50, 130, 70, 20);
-        getContentPane().add(t_kembali);
-        t_kembali.setBounds(300, 430, 430, 20);
-        getContentPane().add(l_nama);
-        l_nama.setBounds(300, 130, 430, 20);
-        getContentPane().add(t_total);
-        t_total.setBounds(300, 320, 430, 20);
 
-        jLabel10.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
+        t_kembali.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        getContentPane().add(t_kembali);
+        t_kembali.setBounds(300, 420, 460, 30);
+
+        l_nama.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        getContentPane().add(l_nama);
+        l_nama.setBounds(300, 120, 450, 40);
+
+        t_total.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        getContentPane().add(t_total);
+        t_total.setBounds(300, 320, 460, 30);
+
+        jLabel10.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel10.setText("TOTAL");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(50, 320, 100, 20);
+        jLabel10.setBounds(50, 330, 100, 20);
+
+        l_nohp.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         getContentPane().add(l_nohp);
-        l_nohp.setBounds(300, 170, 430, 20);
+        l_nohp.setBounds(300, 170, 450, 30);
 
         b_ok.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         b_ok.setText("OK");
@@ -119,15 +128,17 @@ int tglkembali,tot;
         jScrollPane1.setViewportView(tb_keranjang);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(300, 210, 452, 100);
+        jScrollPane1.setBounds(300, 210, 460, 100);
 
-        jLabel1.setText("Tunai");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("TUNAI");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(50, 350, 220, 30);
         getContentPane().add(t_tunai);
         t_tunai.setBounds(300, 350, 460, 30);
 
-        jLabel2.setText("Kembalian");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setText("KEMBALIAN");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(50, 390, 220, 30);
         getContentPane().add(l_kembali);
@@ -141,6 +152,10 @@ int tglkembali,tot;
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(510, 470, 130, 40);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pembayaran.png"))); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(0, 0, 860, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -210,6 +225,7 @@ int tglkembali,tot;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel l_kembali;
     private javax.swing.JLabel l_nama;

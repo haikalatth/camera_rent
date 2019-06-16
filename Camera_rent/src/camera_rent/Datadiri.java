@@ -66,44 +66,45 @@ BufferedWriter bw;
         jTextField4 = new javax.swing.JTextField();
         t_nohp = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(840, 540));
         getContentPane().setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel2.setText("No. Kartu ID");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(70, 190, 80, 20);
+        jLabel2.setBounds(50, 130, 90, 40);
 
-        jLabel3.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel3.setText("Nama");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(70, 240, 70, 20);
+        jLabel3.setBounds(50, 180, 90, 30);
 
-        jLabel4.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel4.setText("Alamat");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(70, 290, 80, 30);
+        jLabel4.setBounds(50, 230, 80, 30);
 
-        jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel5.setText("No. HP");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(70, 410, 60, 20);
+        jLabel5.setBounds(50, 390, 60, 20);
 
-        jLabel6.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
         jLabel6.setText("Jenis Kelamin");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(70, 380, 90, 20);
+        jLabel6.setBounds(50, 340, 90, 20);
         getContentPane().add(t_nama);
-        t_nama.setBounds(190, 240, 540, 30);
+        t_nama.setBounds(170, 180, 580, 40);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(190, 290, 540, 80);
+        jScrollPane1.setBounds(170, 230, 580, 90);
 
         buttonGroup1.add(rb_laki);
         rb_laki.setText("LAKI - LAKI");
@@ -113,7 +114,7 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(rb_laki);
-        rb_laki.setBounds(190, 380, 93, 23);
+        rb_laki.setBounds(170, 340, 93, 23);
 
         buttonGroup1.add(rb_perem);
         rb_perem.setText("PEREMPUAN");
@@ -123,7 +124,7 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(rb_perem);
-        rb_perem.setBounds(570, 380, 110, 23);
+        rb_perem.setBounds(550, 340, 110, 23);
 
         btn_lanjut.setText("Selanjutnya");
         btn_lanjut.addActionListener(new java.awt.event.ActionListener() {
@@ -132,7 +133,7 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(btn_lanjut);
-        btn_lanjut.setBounds(530, 450, 100, 30);
+        btn_lanjut.setBounds(640, 440, 110, 40);
 
         jTextField4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -140,7 +141,7 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(190, 190, 540, 30);
+        jTextField4.setBounds(170, 130, 580, 40);
 
         t_nohp.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -148,7 +149,7 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(t_nohp);
-        t_nohp.setBounds(190, 410, 540, 30);
+        t_nohp.setBounds(170, 380, 580, 40);
 
         jButton2.setText("Kembali");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -157,7 +158,11 @@ BufferedWriter bw;
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(640, 450, 90, 30);
+        jButton2.setBounds(170, 440, 110, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/datadiri.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 860, 540);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -267,6 +272,7 @@ BufferedWriter bw;
     private javax.swing.JButton btn_lanjut;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

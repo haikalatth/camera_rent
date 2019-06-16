@@ -47,6 +47,7 @@ public class Dashboard extends javax.swing.JFrame {
         bt_cancel = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(241, 238, 238));
@@ -110,7 +111,7 @@ public class Dashboard extends javax.swing.JFrame {
         jTabbedPane1.addTab("Aksesoris", jPanel2);
 
         getContentPane().add(jTabbedPane1);
-        jTabbedPane1.setBounds(30, 180, 660, 220);
+        jTabbedPane1.setBounds(20, 120, 660, 220);
 
         tb_keranjang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -133,12 +134,12 @@ public class Dashboard extends javax.swing.JFrame {
         }
 
         getContentPane().add(jScrollPane3);
-        jScrollPane3.setBounds(120, 410, 570, 100);
+        jScrollPane3.setBounds(110, 350, 570, 100);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Keranjang :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(30, 400, 110, 30);
+        jLabel1.setBounds(20, 340, 110, 30);
 
         bt_cancel.setText("Cancel");
         bt_cancel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -147,7 +148,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bt_cancel);
-        bt_cancel.setBounds(720, 480, 120, 30);
+        bt_cancel.setBounds(420, 470, 120, 40);
 
         jButton4.setText("Selanjutnya");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -161,7 +162,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(720, 420, 120, 40);
+        jButton4.setBounds(560, 470, 120, 40);
 
         jButton1.setText("Kembali");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +171,11 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(720, 370, 120, 40);
+        jButton1.setBounds(110, 470, 120, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/pilihitem.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 860, 540);
 
         setSize(new java.awt.Dimension(876, 579));
         setLocationRelativeTo(null);
@@ -264,6 +269,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

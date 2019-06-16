@@ -56,6 +56,7 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         t_subtotal = new javax.swing.JLabel();
         btn_lanjut = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(860, 540));
@@ -64,29 +65,32 @@ public class Penyewaan extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 18)); // NOI18N
         jLabel1.setText("Data Pesanan :");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(70, 200, 130, 22);
+        jLabel1.setBounds(10, 130, 130, 24);
 
-        jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 1, 14)); // NOI18N
         jLabel2.setText("Lama Peminjaman :");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(80, 400, 140, 20);
+        jLabel2.setBounds(20, 330, 140, 20);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Hari Peminjaman");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(120, 430, 100, 14);
+        jLabel3.setBounds(60, 350, 130, 40);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Hari Pengembalian");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(120, 470, 110, 14);
+        jLabel4.setBounds(60, 400, 130, 50);
 
         jLabel5.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
         jLabel5.setText("Total");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(730, 400, 40, 20);
+        jLabel5.setBounds(690, 340, 40, 20);
 
+        t_akhir.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         t_akhir.setText("0");
         getContentPane().add(t_akhir);
-        t_akhir.setBounds(720, 424, 90, 30);
+        t_akhir.setBounds(680, 360, 100, 70);
 
         tb_keranjang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,9 +103,9 @@ public class Penyewaan extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tb_keranjang);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(200, 200, 640, 190);
+        jScrollPane1.setBounds(140, 130, 640, 190);
         getContentPane().add(tgl_pinjam);
-        tgl_pinjam.setBounds(280, 420, 160, 30);
+        tgl_pinjam.setBounds(220, 350, 170, 40);
 
         tgl_kembali.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
@@ -109,7 +113,7 @@ public class Penyewaan extends javax.swing.JFrame {
             }
         });
         getContentPane().add(tgl_kembali);
-        tgl_kembali.setBounds(280, 460, 160, 30);
+        tgl_kembali.setBounds(220, 410, 170, 40);
 
         jButton2.setText("Kembali");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -118,16 +122,17 @@ public class Penyewaan extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(750, 460, 90, 30);
+        jButton2.setBounds(280, 470, 110, 50);
 
         jLabel7.setFont(new java.awt.Font("Adobe Caslon Pro Bold", 0, 12)); // NOI18N
         jLabel7.setText("SubTotal");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(600, 400, 60, 20);
+        jLabel7.setBounds(560, 340, 60, 20);
 
+        t_subtotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         t_subtotal.setText("0");
         getContentPane().add(t_subtotal);
-        t_subtotal.setBounds(590, 424, 80, 30);
+        t_subtotal.setBounds(550, 360, 100, 70);
 
         btn_lanjut.setText("Selanjutnya");
         btn_lanjut.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +141,11 @@ public class Penyewaan extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btn_lanjut);
-        btn_lanjut.setBounds(650, 460, 90, 30);
+        btn_lanjut.setBounds(660, 470, 120, 50);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/penyewaan.png"))); // NOI18N
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(0, 0, 860, 540);
 
         pack();
         setLocationRelativeTo(null);
@@ -224,6 +233,7 @@ public class Penyewaan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel t_akhir;
