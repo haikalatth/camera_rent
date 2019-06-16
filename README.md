@@ -7,6 +7,8 @@
 Aplikasi ini merupakan sebuah aplikasi yang dibuat untuk mempermudah admin maupun penyewa yang akan merental kamera. 
 Cara penggunaan Aplikasi : 
 1. Jalankan program dari frame HOME. Di dalam menu Home ada 3 menu yaitu, Pilih Item, Daftar Transaksi & Tambah item.
+![Screenshot 1](https://github.com/haikalatth/camera_rent/blob/master/1.PNG)
+
  ## A. Pilih Item
    Ketika User memilih menu Pilih Item, User diminta memilih barang yang diinginkan. Ketika user sudah memilih barang yang diinginkan user diminta untuk memasukkan jumlah barang yang diinginkan. Selanjutnya barang yang sudah dipilih akan masuk masuk ke keranjang.
  ## 1. Penyewaan
@@ -22,4 +24,3 @@ Cara penggunaan Aplikasi :
    Fungsi dalam menu ini yaitu, untuk menambah barang yang sebelumnya belum ada di menu Pilih Item. 
   
  ## Note : Sebelum mengclone aplikasi ini, diharap sudah menginstall dan memasang JCalender pada aplikasi compiler java anda.
-![Screenshot 1](https://github.com/haikalatth/camera_rent/blob/master/1.PNG)
